@@ -1,0 +1,49 @@
+name: Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+defaults:
+  run:
+    shell: nix develop .#internal --command bash -e {0}
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        include:
+          # Linux
+          - os: ubuntu-latest
+            arch: x86_64
+          - os: ubuntu-latest
+            arch: aarch64
+          - os: ubuntu-latest
+            arch: i686
+          # macOS
+          - os: macos-latest
+            arch: x86_64
+          - os: macos-latest
+            arch: aarch64
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@main
+        with:
+          extra-conf: |
+            extra-platforms = ${{ matrix.arch }}-linux aarch64-darwin x86_64-darwin
+
+      - name: Install Dependencies
+        run: npm install
+
+      - run: biome ci
+      - run: nixpkgs-fmt --check .
+
+      - name: Run Tests
+        run: npx vitest

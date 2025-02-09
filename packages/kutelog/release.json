@@ -1,0 +1,21 @@
+{
+	"version": "0.1.0",
+	"artifacts": {
+		"x86_64-linux": {
+			"url": "https://github.com/appthrust/kutelog/releases/download/v0.1.0/kutelog-linux-amd64",
+			"sha256": "sha256-8PTH6+vHg3VCCtTltQw4Hpq35jh4mf6BpRLcH/RzzEY="
+		},
+		"aarch64-linux": {
+			"url": "https://github.com/appthrust/kutelog/releases/download/v0.1.0/kutelog-linux-arm64",
+			"sha256": "sha256-QT/uz5tBYlsk9MVhHMae6FxceJbWSNFy+DwL4J6PefI="
+		},
+		"x86_64-darwin": {
+			"url": "https://github.com/appthrust/kutelog/releases/download/v0.1.0/kutelog-darwin-amd64",
+			"sha256": "sha256-xBGMIanA84EU4VC2uPXho79HOqkANczEVUC+NUWVAmk="
+		},
+		"aarch64-darwin": {
+			"url": "https://github.com/appthrust/kutelog/releases/download/v0.1.0/kutelog-darwin-arm64",
+			"sha256": "sha256-hxz2Ghs4fWUVW+7uCptABEHaCiUtX0r+rPpFEjTBCaQ="
+		}
+	}
+}

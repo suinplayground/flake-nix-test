@@ -1,0 +1,21 @@
+{
+	"version": "0.11.0",
+	"artifacts": {
+		"x86_64-linux": {
+			"url": "https://github.com/kcl-lang/cli/releases/download/v0.11.0/kcl-v0.11.0-linux-amd64.tar.gz",
+			"sha256": "sha256-Jeu/Pqnx5H+CPppdbBnaBxVkAA9oHggQyqrcXE7XT3U="
+		},
+		"aarch64-linux": {
+			"url": "https://github.com/kcl-lang/cli/releases/download/v0.11.0/kcl-v0.11.0-linux-arm64.tar.gz",
+			"sha256": "sha256-I8dnP8IN1vN5/tIrd/CkoD72TIlpJPJOQauaUdQe/68="
+		},
+		"x86_64-darwin": {
+			"url": "https://github.com/kcl-lang/cli/releases/download/v0.11.0/kcl-v0.11.0-darwin-amd64.tar.gz",
+			"sha256": "sha256-xKnJ2EHmw9M7tKk+A78hJsOTy5JjhncAD6xxl5i0mzs="
+		},
+		"aarch64-darwin": {
+			"url": "https://github.com/kcl-lang/cli/releases/download/v0.11.0/kcl-v0.11.0-darwin-arm64.tar.gz",
+			"sha256": "sha256-/VFiu/b/nZu025tNGXthm+rf5RxUQBC6J5yiCLsrEbc="
+		}
+	}
+}

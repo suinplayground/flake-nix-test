@@ -1,0 +1,24 @@
+{
+	"name": "private",
+	"private": true,
+	"version": "1.0.0",
+	"scripts": {
+		"test": "vitest --run --color | tee",
+		"update-releases": "tsx update.ts"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@tsconfig/node22": "^22.0.0",
+		"@tsconfig/strictest": "^2.0.5",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.3",
+		"vitest": "^3.0.5",
+		"zx": "^8.3.2"
+	},
+	"module": "index.ts",
+	"type": "module",
+	"dependencies": {
+		"glob": "^11.0.1",
+		"ky": "^1.7.4"
+	}
+}

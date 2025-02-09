@@ -1,0 +1,45 @@
+name: Update Releases
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # 毎日 UTC 00:00 (JST 09:00)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+defaults:
+  run:
+    shell: nix develop .#internal --command bash -e {0}
+
+jobs:
+  update-releases:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@main
+      - name: Install Dependencies
+        run: npm install
+      - name: Update Releases
+        id: update
+        run: npm run update-releases
+      - name: Show git diff
+        run: git diff
+      - name: Create Pull Request
+        if: steps.update.outputs.CONTENT_CHANGED == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: "chore: update package releases"
+          title: "Update package releases"
+          body: |
+            This PR updates the release.json files with the latest versions.
+
+            Changes:
+            ${{ steps.update.outputs.CHANGES }}
+
+            Please review and merge if everything looks correct.
+          branch: update-releases
+          delete-branch: true
+          labels: ${{ steps.update.outputs.LABELS }}

@@ -1,0 +1,21 @@
+name: Create Tags
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  create-tags:
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.head.ref, 'update-releases')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Create tags
+        run: |
+          for label in $(echo "${{ join(github.event.pull_request.labels.*.name, ' ') }}")
+          do
+            git tag "$label"
+            git push origin "$label"
+          done
