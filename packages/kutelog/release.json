@@ -1,5 +1,5 @@
 {
-	"version": "0.1.0",
+	"version": "0.0.0",
 	"artifacts": {
 		"x86_64-linux": {
 			"url": "https://github.com/appthrust/kutelog/releases/download/v0.1.0/kutelog-linux-amd64",

@@ -1,5 +1,5 @@
 {
-	"version": "0.9.0",
+	"version": "0.0.0",
 	"artifacts": {
 		"x86_64-linux": {
 			"url": "https://github.com/kcl-lang/kubectl-kcl/releases/download/v0.9.0/kubectl-kcl-linux-amd64.tgz",
