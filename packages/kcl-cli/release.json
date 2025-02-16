@@ -1,21 +1,21 @@
 {
-	"version": "0.11.0",
+	"version": "0.11.1",
 	"artifacts": {
 		"x86_64-linux": {
-			"url": "https://github.com/kcl-lang/cli/releases/download/v0.11.0/kcl-v0.11.0-linux-amd64.tar.gz",
-			"sha256": "sha256-Jeu/Pqnx5H+CPppdbBnaBxVkAA9oHggQyqrcXE7XT3U="
+			"url": "https://github.com/kcl-lang/cli/releases/download/v0.11.1/kcl-v0.11.1-linux-amd64.tar.gz",
+			"sha256": "sha256-QObiobIb0NiSvRySBaBRRgESJdnPRQHeJP7l/VVqfPY="
 		},
 		"aarch64-linux": {
-			"url": "https://github.com/kcl-lang/cli/releases/download/v0.11.0/kcl-v0.11.0-linux-arm64.tar.gz",
-			"sha256": "sha256-I8dnP8IN1vN5/tIrd/CkoD72TIlpJPJOQauaUdQe/68="
+			"url": "https://github.com/kcl-lang/cli/releases/download/v0.11.1/kcl-v0.11.1-linux-arm64.tar.gz",
+			"sha256": "sha256-8RUfxbKHjc5uJo9XUgdPoLY8aAclpXDcnzC0QCLGS5k="
 		},
 		"x86_64-darwin": {
-			"url": "https://github.com/kcl-lang/cli/releases/download/v0.11.0/kcl-v0.11.0-darwin-amd64.tar.gz",
-			"sha256": "sha256-xKnJ2EHmw9M7tKk+A78hJsOTy5JjhncAD6xxl5i0mzs="
+			"url": "https://github.com/kcl-lang/cli/releases/download/v0.11.1/kcl-v0.11.1-darwin-amd64.tar.gz",
+			"sha256": "sha256-FVus87o8WcKdZvqu2dLpJ2H0x9gm+Y0tA4KIU4nwASM="
 		},
 		"aarch64-darwin": {
-			"url": "https://github.com/kcl-lang/cli/releases/download/v0.11.0/kcl-v0.11.0-darwin-arm64.tar.gz",
-			"sha256": "sha256-/VFiu/b/nZu025tNGXthm+rf5RxUQBC6J5yiCLsrEbc="
+			"url": "https://github.com/kcl-lang/cli/releases/download/v0.11.1/kcl-v0.11.1-darwin-arm64.tar.gz",
+			"sha256": "sha256-N2z4658IrI9euNKKJ11ZKmxKcvXyT/VWcmkpjcNumgQ="
 		}
 	}
 }
